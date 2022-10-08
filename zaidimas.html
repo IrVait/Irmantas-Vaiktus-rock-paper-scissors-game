@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    margin: auto;
+    height: 5%;
+    width: 15%;
+    background-color: #03254c;
+    color: white;
+    text-align: center;
+    display: flex;
+    top: 20%;
+    justify-content: center;
+     align-items: center;
+    
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+width: 200%;  
+    
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 5%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+</head>
+    
+     <link rel="stylesheet" href="%C5%BEaidimas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <div class="main">
+        
+        <div class="ekranas1">
+       <li>1</li>
+            </div>
+        <div class="infoblok1"> 🖥️ Kompiuterio pasirinkimas 🖥️</div>
+        <div class="rez">
+       <li>2</li>
+            </div>
+        <div class="infoblok2"> 🧍 Žaidėjo pasirinkimas 🧍</div>
+        <div class="ekranas2">
+       <li>3</li>
+            </div>
+        <div class="start">Pasirinkimai:</div>
+        <div class="paspaud">
+       <li onclick="zaidejasRenkasi('akmuo')">4</li>
+       <li onclick="zaidejasRenkasi('popierius')">5</li>
+       <li onclick="zaidejasRenkasi('zirkles')">6</li>
+            </div>
+        <div class="rezpav">Rezultatas</div>
+        <div class="rezult">
+       <li>7</li>
+            </div>
+        <div class="popup" onclick="myFunction()">Taisyklės
+  <span class="popuptext" id="myPopup">Žaidimo taisyklės:
+            Žaidėjas pasirenka ženklą ir žaidžia preš kompiuterį. 
+      Akmuo nugali žirkles, žirklės nugali popierių, popierius nugali akmenį
+            
+            </span>
+</div>
+             
+</div>
+    <script>
+             
+        let zaidejoPasirinkimas;
+        let kompiuterioPasirinkimas; 
+        let zaidejoLaimejimuSk=0, kompiuterioLaimejimuSk=0;
+        const blokai = document.querySelectorAll('li');
+        blokai[0].innerHTML="";
+        blokai[1].innerHTML="";
+        blokai[2].innerHTML="";
+        blokai[3].innerHTML="<img class='pav' src='mazakm.png'>";
+        blokai[4].innerHTML="<img class='pav' src='mazpop.png'>";
+        blokai[5].innerHTML="<img class='pav' src='mazzir.png'>";
+        blokai[6].innerHTML="0-0";
+        blokai[7].innerHTML="mygtukas pradėti iš naujo";
+        
+            
+        
+        
+        function zaidejasRenkasi(pasirinkimas){
+            zaidejoPasirinkimas=pasirinkimas;
+            switch (pasirinkimas){
+                case 'akmuo':
+                    blokai[2].innerHTML="<img class='pav' src='akm.png' alt='zirkles'>";
+                break;
+                case 'popierius':
+                    blokai[2].innerHTML="<img class='pav' src='pop.png' alt='zirkles'>";
+                   break;    
+                case 'zirkles':  
+                    blokai[2].innerHTML="<img class='pav' src='zir.png' alt='zirkles'>";
+                    break;       
+            }
+            
+            kompiuterisRenkasi();
+            teisejas();
+            isvekTaskus();
+        }
+        
+        function kompiuterisRenkasi(){
+            var atsitiktinisskaicius = Math.random()*3;
+            console.log(atsitiktinisskaicius);
+            var suapvalintas = Math.floor(atsitiktinisskaicius);
+            console.log(suapvalintas);
+            switch(suapvalintas){
+                case 0:
+                    kompiuterioPasirinkimas='akmuo';
+                    blokai[0].innerHTML="<img class='pav' src='akm.png' alt='zirkles'>";
+                    break;
+                    
+                case 1:
+                    kompiuterioPasirinkimas="popierius";
+                    blokai[0].innerHTML="<img class='pav' src='pop.png' alt='zirkles'>";
+                    break;
+                    
+                case 2:
+                    kompiuterioPasirinkimas="zirkles";
+                    blokai[0].innerHTML="<img class='pav' src='zir.png' alt='zirkles'>";
+                    break;
+            }
+        }
+        
+        function teisejas(){
+            if(kompiuterioPasirinkimas == zaidejoPasirinkimas){
+                blokai[1].innerHTML="Lygiosios";
+            }
+            
+            if((kompiuterioPasirinkimas=='akmuo')&& (zaidejoPasirinkimas=='zirkles')){
+                blokai[1].innerHTML="Laimėjo kompiuteris";
+                kompiuterioLaimejimuSk++;
+            } 
+            
+            
+            if((kompiuterioPasirinkimas=='akmuo')&& (zaidejoPasirinkimas=='popierius')){
+                blokai[1].innerHTML="Laimėjo žaidėjas";
+                zaidejoLaimejimuSk++;
+            }
+            
+            if((kompiuterioPasirinkimas=='zirkles')&& (zaidejoPasirinkimas=='akmuo')){
+                blokai[1].innerHTML="Laimėjo žaidėjas";
+                zaidejoLaimejimuSk++;
+            }
+            
+            if((kompiuterioPasirinkimas=='zirkles')&& (zaidejoPasirinkimas=='popierius')){
+                blokai[1].innerHTML="Laimėjo kompiuteris";
+                kompiuterioLaimejimuSk++;
+            }
+            
+            if((kompiuterioPasirinkimas=='popierius')&& (zaidejoPasirinkimas=='zirkles')){
+                blokai[1].innerHTML="Laimėjo žaidėjas";
+                zaidejoLaimejimuSk++;
+            }
+            
+            if((kompiuterioPasirinkimas=='popierius')&& (zaidejoPasirinkimas=='akmuo')){
+                blokai[1].innerHTML="Laimėjo kompiuteris";
+                kompiuterioLaimejimuSk++;
+            }
+        }
+        
+        function isvekTaskus(){
+            blokai[6].innerHTML="Kompiuteris "+kompiuterioLaimejimuSk+" : "+zaidejoLaimejimuSk +" Žaidėjas";
+        }
+        function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+      
+  
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (orientation: landscape) {
+     div{
+         width: 1536px;
+         height: 721px;
+     }
+    
+    
+.main{
+        background-color:#333333;
+        width: 100%;
+    position: relative;
+    background-image: url("fonass.png");
+        
+    }
+    
+    .ekranas1{
+        background-image: url("melfonas.png");
+        width: 30%;
+        height: 20%;
+        position: relative;
+        text-align: center;
+        margin: auto;
+        top: 5%;
+    }
+    .ekranas2{
+        background-image: url("melfonas.png");
+        width: 30%;
+        height: 20%;
+        position: relative;
+        text-align: center;
+        margin: auto;
+        top: 5%;
+    }
+    .infoblok1{
+        height: 5%;
+        background-color: #03254c;
+        width:30%;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 5%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        
+    
+        
+    }
+    .infoblok2{
+        height: 5%;
+        background-color: #03254c;
+        width:30%;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 5%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+    }
+    .rez{
+        position: relative;
+        margin: auto;
+        text-align: center;
+        height: 10%;
+        width: 25%;
+        top: 5%;
+        background-image: url("melynas.jpg");
+          display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        font-size: 4vh
+        
+        
+    }
+    .paspaud{
+        position: absolute;
+        margin:auto;
+        object-fit: contain;
+        background-image: url("melfonas.png");
+        width: 7%;
+        height: 30%;
+        display: inline-block;
+        top: 20%;
+        left: 10%;
+        border-radius: 25%;   
+    }
+    .start{
+        position: absolute;
+        margin: auto;
+        background-color:#03254c;
+        height: 5%;
+        width: 10%;
+        top: 13%;
+        left: 9%;
+        text-align: center;
+        color: white;
+          display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        
+    }
+    .rezult{
+        position: absolute;
+        margin: auto;
+        background-image: url("melynas.jpg");
+        height: 5%;
+        width: 15%;
+        float: right;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        right: 0;
+        bottom: 60%;
+        right: 10%;
+        color: white;
+        
+        
+    }
+    
+    .rezpav{
+        position: absolute;
+        margin: auto;
+        height: 5%;
+        width: 15%;
+        background-color: #03254c;
+        color: white;
+         display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        right: 0;
+        bottom: 65%;
+        right: 10%;
+    }
+    
+    }
+
+
+
+@media (orientation: portrait) {
+     div{
+         width: 711px;
+         height: 711px;
+     }
+    
+    .main{
+        background-color: #333333;
+        background-image: url("fonass.png");
+    }   
+    
+.ekranas1{
+        background-image: url("melfonas.png");
+        width: 25%;
+        height: 15%;
+        position: absolute;
+        text-align: center;
+        margin: auto;
+        top: 25%;
+    display: flex;
+     justify-content: center;
+        align-items: center;
+    right: 40%;
+    }
+    .ekranas2{
+       background-image: url("melfonas.png");
+        width: 25%;
+        height: 15%;
+        position: absolute;
+        text-align: center;
+        margin: auto;
+        top: 60%;
+    display: flex;
+     justify-content: center;
+        align-items: center;
+    right: 40%;
+    }
+     .infoblok2{
+        height: 5%;
+        background-color: #03254c;
+        width:25%;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        top: 55%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+         right: 40%;
+         font-size: 1.8vh;
+       
+}
+     .infoblok1{
+        height: 5%;
+        background-color: #03254c;
+        width:25%;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+         right: 40%;
+         font-size: 1.8vh;
+       
+}
+    .rez{
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        height: 10%;
+        width: 25%;
+        top: 45%;
+        background-image: url("melynas.jpg");
+          display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        font-size: 2.5vh;
+        right: 40%;
+        
+        
+    }
+    .paspaud{
+        position: absolute;
+        margin:auto;
+        object-fit: contain;
+         background-image: url("melfonas.png");
+        height: 30%;
+        display: inline-block;
+        top: 30%;
+        left: 5%;
+        border-radius: 25%;
+        width: 20%;
+        
+    }
+    .start{
+        position: absolute;
+        margin: auto;
+        background-color:#03254c;
+        height: 5%;
+        width: 20%;
+        top: 20%;
+        left: 5%;
+        text-align: center;
+        color: white;
+          display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 1.7vh
+        
+    }
+    .rezult{
+        position: absolute;
+        margin: auto;
+        background-image: url("melynas.jpg");
+        height: 5%;
+        width: 30%;
+        float: right;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        right: 0;
+        bottom: 60%;
+        right: 2%;
+        color: white;
+        font-size: 1.7vh;
+        
+        
+    }
+    
+    .rezpav{
+        position: absolute;
+        margin: auto;
+        height: 5%;
+        width: 30%;
+        background-color: #03254c;
+        color: white;
+         display:flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        right: 0;
+        bottom: 65%;
+        right: 2%;
+        font-size: 1.7vh;
+        
+    }
+    .popup {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    margin: auto;
+    height: 5%;
+    width: 15%;
+    background-color: #03254c;
+    color: white;
+    text-align: center;
+    display: flex;
+    top: 90%;
+    left: 40%;
+    justify-content: center;
+     align-items: center;
+    
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+width: 200%;  
+    
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 5%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+}
